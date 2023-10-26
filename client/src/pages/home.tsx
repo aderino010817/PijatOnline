@@ -9,9 +9,19 @@ export default function Home() {
     <>
       <Layout>
         <Stack mt={"8vh"}>
-          <Flex px="20vh" py="10vh">
-            <Flex flexDirection={"column"} justify={"center"} w="75vh" gap="5">
-              <Text fontSize={"35px"} fontWeight={"bold"} lineHeight={1}>
+          <Box display="flex" flexDirection={{
+            base: "column",
+            md: 'column',
+            lg: 'row'
+          }} padding={{
+            base: '2em'
+          }}>
+            <Flex flexDirection={"column"} justify={"center"} w="100%" gap="5">
+              <Text fontSize={{
+                base: '20px',
+                md: '24px',
+                lg: '35px'
+              }} fontWeight={"bold"} lineHeight={1}>
                 Jasa Pijat Panggilan Terpercaya dan Profesional
               </Text>
               <Divider borderWidth="2px" borderColor={"teal"} w={"10vh"} />
@@ -23,7 +33,7 @@ export default function Home() {
             <Box w="150vh">
               <Image src={pijat} alt="massage" />
             </Box>
-          </Flex>
+          </Box>
           <Box display={"flex"} alignItems={"center"} flexDirection={"column"} px={"20vh"} py={"10vh"} bgColor={"teal.400"} color={"white"}>
             <Flex flexDirection={"column"} justify={"center"} alignItems={"center"} w={"125vh"} gap={3} mt={5}>
               <Text fontSize={"25px"} fontWeight={"bold"}>

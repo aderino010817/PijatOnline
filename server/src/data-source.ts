@@ -1,14 +1,13 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-require("dotenv").config();
 
 export const AppDataSource = new DataSource({
-  type: "mysql",
-  host: process.env.DB_HOST as string,
-  port: 3306,
-  username: process.env.DB_USERNAME as string,
-  password: process.env.DB_PASSWORD as string,
-  database: process.env.DB_DATABASE as string,
+  type: "postgres",
+  host: "viaduct.proxy.rlwy.net",
+  port: 36769,
+  username: "postgres",
+  password: "*e2F5*-Ed46af5BEeGGAc1EE22c6ccff",
+  database: "railway",
   synchronize: false,
   logging: true,
   entities: ["src/entities/*.ts"],
